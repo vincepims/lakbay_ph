@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; background: var(--white); color: var(--ink); font-family: var(--font-body); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+button, input, textarea, select { color: inherit; font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; letter-spacing: -.035em; }
+h1 { font-size: clamp(2.55rem, 5vw, 5.4rem); }
+h2 { font-size: clamp(1.9rem, 3.2vw, 3.2rem); }
+p { color: var(--muted); }
+.shell { width: var(--shell); margin-inline: auto; }
+.eyebrow { margin-bottom: 13px; color: var(--ocean); font-size: .74rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.primary-button, .light-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 9px; padding: 0 22px; border: 1px solid var(--ocean); border-radius: 999px; background: linear-gradient(135deg, var(--ocean), var(--blue)); color: white; font-weight: 800; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.primary-button:hover, .light-button:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 114, 231, .22); }
+.light-button { border-color: white; background: white; color: var(--ocean-dark); }
+.section-title { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 38px; }
+.section-title h2 { margin-bottom: 0; }
+.section-title > a { display: inline-flex; flex: none; align-items: center; gap: 8px; color: var(--ocean-dark); font-weight: 800; }
+.section-title svg { width: 18px; }
+.two-fields, .four-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.four-fields { grid-template-columns: repeat(4, 1fr); }
+.simple-empty { min-height: 62vh; display: grid; place-items: center; align-content: center; padding-block: 90px; text-align: center; }
+.simple-empty > svg { width: 56px; height: 56px; margin-bottom: 18px; color: var(--ocean); }
+.simple-empty h1 { margin-bottom: 14px; font-size: clamp(2.2rem, 4vw, 4rem); }
+.simple-empty .primary-button { margin-top: 20px; }
+@media (max-width: 700px) { .section-title { align-items: flex-start; flex-direction: column; margin-bottom: 26px; }.two-fields, .four-fields { grid-template-columns: 1fr; } }
